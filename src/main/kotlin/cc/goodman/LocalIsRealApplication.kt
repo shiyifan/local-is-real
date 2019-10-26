@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.ViewResolver
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer
 import org.springframework.web.servlet.config.annotation.EnableWebMvc
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer
@@ -25,9 +26,6 @@ open class RootContextConfig {
 @EnableWebMvc
 @ComponentScan(basePackages = ["cc.goodman.controller"])
 open class WebContextConfig : WebMvcConfigurer {
-//    override fun configureViewResolvers(registry: ViewResolverRegistry) {
-//        registry.jsp()
-//    }
 
     @Bean
     open fun viewResolver(): ViewResolver {
@@ -37,9 +35,9 @@ open class WebContextConfig : WebMvcConfigurer {
         return i
     }
 
-//    override fun configureDefaultServletHandling(configurer: DefaultServletHandlerConfigurer) {
-//        configurer.enable()
-//    }
+    override fun configureDefaultServletHandling(configurer: DefaultServletHandlerConfigurer) {
+        configurer.enable()
+    }
 }
 
 class LocalIsRealServletInitializer : AbstractAnnotationConfigDispatcherServletInitializer() {
