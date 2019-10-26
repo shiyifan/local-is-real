@@ -6,8 +6,8 @@ import java.io.PrintWriter
 
 @Controller
 class HomeController {
-    @GetMapping("/")
-    fun hello(out: PrintWriter) {
-        out.println("Hello ccgoodman")
+    @GetMapping("/hello")
+    fun hello(out: PrintWriter): String {
+        return "home";
     }
 }

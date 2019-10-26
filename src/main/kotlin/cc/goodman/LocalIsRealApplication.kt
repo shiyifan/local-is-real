@@ -4,6 +4,9 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
+import org.springframework.web.servlet.config.annotation.EnableWebMvc
+import org.springframework.web.servlet.config.annotation.ViewResolverRegistry
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer
 
 fun main(args: Array<String>) {
@@ -17,8 +20,16 @@ open class RootContextConfig {
 }
 
 @Configuration
+@EnableWebMvc
 @ComponentScan(basePackages = ["cc.goodman.controller"])
-open class WebContextConfig {
+open class WebContextConfig : WebMvcConfigurer {
+    override fun configureViewResolvers(registry: ViewResolverRegistry) {
+        registry.jsp()
+    }
+
+//    override fun configureDefaultServletHandling(configurer: DefaultServletHandlerConfigurer) {
+//        configurer.enable()
+//    }
 }
 
 class LocalIsRealServletInitializer : AbstractAnnotationConfigDispatcherServletInitializer() {

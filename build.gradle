@@ -18,12 +18,15 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect
+    implementation 'org.jetbrains.kotlin:kotlin-reflect'
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies
     providedCompile group: 'org.springframework.boot', name: 'spring-boot-dependencies', version: '2.2.0.RELEASE', ext: 'pom'
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 
     components {
         withModule('org.springframework:spring-beans') {
