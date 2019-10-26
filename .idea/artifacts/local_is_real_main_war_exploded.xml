@@ -48,7 +48,6 @@
         </element>
       </element>
       <element id="javaee-facet-resources" facet="local-is-real.main/web/Web Gradle : local-is-real-0.0.war" />
-      <element id="javaee-facet-resources" facet="local-is-real.main/web/Web" />
     </root>
   </artifact>
 </component>
