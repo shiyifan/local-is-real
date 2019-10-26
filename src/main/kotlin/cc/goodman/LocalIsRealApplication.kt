@@ -24,7 +24,7 @@ open class RootContextConfig {
 @ComponentScan(basePackages = ["cc.goodman.controller"])
 open class WebContextConfig : WebMvcConfigurer {
     override fun configureViewResolvers(registry: ViewResolverRegistry) {
-        registry.jsp()
+        registry.jsp("/", ".jsp")
     }
 
 //    override fun configureDefaultServletHandling(configurer: DefaultServletHandlerConfigurer) {
