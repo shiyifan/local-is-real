@@ -11,8 +11,11 @@
     <title>Title</title>
 </head>
 <body>
+<p>
 <span>
     <b>Hello ccgoodman</b>
 </span>
+</p>
+<img src="img/lxf1.jpg" alt="linxiaofu" width="400" height="400"/>
 </body>
 </html>
