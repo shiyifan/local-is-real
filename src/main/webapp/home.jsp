@@ -16,6 +16,7 @@
     <b>Hello ccgoodman</b>
 </span>
 </p>
-<img src="img/lxf1.jpg" alt="linxiaofu" width="400" height="400"/>
+<img src="img/lxf1.jpg" alt="linxiaofu" width="400" height="400"/><br/>
+<img src="img/love.png" alt="like" width="16" height="16"> like 9999999+
 </body>
 </html>
